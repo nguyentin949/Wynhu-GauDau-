@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chi Tiết Video</title>
+    <link rel="stylesheet" href="ss2.css">
+    <style>
+        body {
+            background-color: #0d1a26;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            color: #fff;
+            overflow: hidden;
+        }
+
+        .detail-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100vh;
+            background-color: rgba(13, 26, 38, 0.8);
+            padding: 0;
+            margin: 0;
+        }
+
+        .detail-content {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .detail-content video {
+            max-width: 100%;
+            max-height: 100vh;
+            object-fit: contain;
+            border-radius: 0;
+            border: none;
+            box-shadow: none;
+        }
+
+        .back-button {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 100;
+            text-decoration: none;
+            background: transparent;
+            border: 2px solid #ff33cc;
+            color: #ff33cc;
+            border-radius: 10px;
+            padding: 15px 30px;
+            font-size: 1.5em;
+            font-weight: bold;
+            text-transform: uppercase;
+            transition: all 0.3s ease;
+            box-shadow: 0 0 10px #ff33cc;
+        }
+
+        .back-button:hover {
+            transform: scale(1.1) translateX(-50%);
+            background-color: #ff33cc;
+            color: #0d1a26;
+            box-shadow: 0 0 20px #ff33cc, 0 0 40px #ff33cc;
+        }
+    </style>
+</head>
+<body>
+    <div class="detail-container">
+        <div class="detail-content" id="content-display">
+            <video controls autoplay loop class="detail-content"><source src="wynhu.mp4" type="video/mp4"></video>
+        </div>
+    </div>
+    
+    <a href="ss2.html" class="back-button">Quay Lại</a>
+</body>
+</html>

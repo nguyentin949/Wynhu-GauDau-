@@ -1,0 +1,101 @@
+body {
+    background-color: #0d1a26;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    color: #fff;
+    overflow: hidden;
+}
+
+.card {
+    background-color: rgba(13, 26, 38, 0.8);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 0 30px rgba(0, 255, 255, 0.4);
+    text-align: center;
+    position: relative;
+    max-width: 600px;
+    width: 90%;
+    animation: fadeIn 2s ease-out;
+    border: 2px solid #00ffff;
+    z-index: 1;
+}
+
+.profile-pic {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+    border: 5px solid #00ffff;
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.6);
+}
+
+.title {
+    font-size: 2.5em;
+    color: #33ccff;
+    margin-bottom: 5px;
+}
+
+.name {
+    font-size: 3.5em;
+    color: #00ffff;
+    margin-top: 0;
+    font-weight: bold;
+    animation: neonGlitter 1.5s infinite alternate;
+}
+
+.message {
+    font-size: 1.2em;
+    color: #b3e0ff;
+    line-height: 1.6;
+}
+
+.from {
+    margin-top: 30px;
+    font-style: italic;
+    color: #99e6ff;
+}
+
+/* Nút nhạc mới: to hơn và nằm ở giữa */
+.music-button {
+    background: transparent;
+    border: 2px solid #00ffff;
+    color: #00ffff;
+    border-radius: 10px; /* Bo góc nhẹ thay vì tròn hoàn toàn */
+    padding: 15px 30px; /* Tăng padding để nút to ra */
+    margin-top: 30px; /* Tạo khoảng cách với chữ */
+    cursor: pointer;
+    font-size: 1.5em; /* Kích thước chữ to hơn */
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 10px #00ffff;
+}
+
+.music-button:hover {
+    transform: scale(1.1);
+    background-color: #00ffff;
+    color: #0d1a26;
+    box-shadow: 0 0 20px #00ffff, 0 0 40px #00ffff;
+}
+
+/* Bạn có thể xóa class .hidden vì không còn dùng biểu tượng nữa */
+
+/* Keyframe animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes neonGlitter {
+    from {
+        text-shadow: 0 0 5px #00ffff, 0 0 10px #00ffff, 0 0 15px #00ffff;
+    }
+    to {
+        text-shadow: 0 0 10px #33ccff, 0 0 20px #33ccff, 0 0 30px #33ccff;
+    }
+}
